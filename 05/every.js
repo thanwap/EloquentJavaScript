@@ -9,6 +9,11 @@ function every(array, test) {
     }
     return result;
   }
+
+  function every2(array, test) {
+    return !array.some(x => !test(x));
+  }
+  
   
   console.log(every([1, 3, 5], n => n < 10));
   // → true
