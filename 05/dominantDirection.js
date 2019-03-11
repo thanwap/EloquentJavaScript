@@ -5,14 +5,12 @@ function dominantDirection(text) {
 
     }
     return countBy(chars, (x) => { return x ? x.direction : "" })
-        .reduce((res, cur) => {
-
-            if (cur.count > res.count)
-                return cur;
-
-            return res
-
-        }).name
+        .reduce((res, cur) => 
+            {
+                if (cur.count > res.count) return cur;
+                    
+                return res;
+            }).name;
 }
 
 
